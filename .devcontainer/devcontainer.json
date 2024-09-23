@@ -18,9 +18,9 @@
 		}
 	},
 	"mounts": [
-		"source=/run/host-services/ssh-auth.sock,target=/ssh-agent,type=bind"
+		"source=${localEnv:SSH_AUTH_SOCK},target=/ssh-agent,type=bind"
 	],
-	"remoteEnv": {
+	"containerEnv": {
 		"SSH_AUTH_SOCK": "/ssh-agent"
 	},
 	"forwardPorts": [
